@@ -1,5 +1,4 @@
 class InceptionDiscriminator(nn.Module):
-    # def __init__(self, input_nc, norm_layer=nn.BatchNorm2d, use_sigmoid=False, gpu_ids=[]):
     def __init__(self, input_nc, use_sigmoid=False, gpu_ids=[]):
         super(InceptionDiscriminator, self).__init__()
         self.gpu_ids = gpu_ids
