@@ -10,7 +10,6 @@ class InceptionDiscriminator(nn.Module):
         self.last2 = nn.Conv2d(192, 1, kernel_size=3, padding=1)
         self.last1 = nn.Sigmoid()
 
-
     def forward(self, x):
         if len(self.gpu_ids) and isinstance(x.data, torch.cuda.FloatTensor):
             x = nn.parallel.data_parallel(self.patchD, x, self.gpu_ids)
